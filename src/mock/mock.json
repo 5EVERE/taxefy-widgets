@@ -1,0 +1,139 @@
+{
+    "title": "Steuerausgleich Formular",
+    "questions": [
+      {
+        "enum": "ESTIMATE_REFUND",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Schätze deine Steuer-Rückzahlung in Sekunden"
+        },
+        "options": [
+          {
+            "value": "start",
+            "title": {
+              "de": "Los geht’s"
+            }
+          }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "*",
+            "next": "ANNUAL_INCOME"
+          }
+        ]
+      },
+      {
+        "enum": "ANNUAL_INCOME",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Wie hoch ist dein jährliches Bruttoeinkommen?"
+        },
+        "options": [
+          { "value": "0-12k", "title": { "de": "0 - 12k €" } },
+          { "value": "13k-19k", "title": { "de": "13k - 19k €" } },
+          { "value": "20k-34k", "title": { "de": "20k - 34k €" } },
+          { "value": "35k-66k", "title": { "de": "35k - 66k €" } },
+          { "value": "67k-99k", "title": { "de": "67k - 99k €" } },
+          { "value": "over-100k", "title": { "de": "über 100k €" } }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "*",
+            "next": "FULL_YEAR_WORK"
+          }
+        ]
+      },
+      {
+        "enum": "FULL_YEAR_WORK",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Hast du letztes Jahr volle 12 Monate gearbeitet?"
+        },
+        "options": [
+          { "value": "no", "title": { "de": "Nein" } },
+          { "value": "yes", "title": { "de": "Ja" } }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "*",
+            "next": "WORK_DISTANCE"
+          }
+        ]
+      },
+      {
+        "enum": "WORK_DISTANCE",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Wie lang ist dein einfacher Arbeitsweg?"
+        },
+        "options": [
+          { "value": "under-2km", "title": { "de": "unter 2 km" } },
+          { "value": "2-19km", "title": { "de": "2 - 19 km" } },
+          { "value": "20-39km", "title": { "de": "20 - 39 km" } },
+          { "value": "40-59km", "title": { "de": "40 - 59 km" } },
+          { "value": "over-60km", "title": { "de": "über 60 km" } }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "*",
+            "next": "FURTHER_EDUCATION"
+          }
+        ]
+      },
+      {
+        "enum": "FURTHER_EDUCATION",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Hattest du eine berufliche Weiterbildung?"
+        },
+        "options": [
+          { "value": "no", "title": { "de": "Nein" } },
+          { "value": "yes", "title": { "de": "Ja" } }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "*",
+            "next": "CHILDREN_COUNT"
+          }
+        ]
+      },
+      {
+        "enum": "CHILDREN_COUNT",
+        "component": "options",
+        "answer": "",
+        "valid": false,
+        "title": {
+          "de": "Für wie viele Kinder beziehst du Familienbeihilfe?"
+        },
+        "options": [
+          { "value": "0", "title": { "de": "0" } },
+          { "value": "1", "title": { "de": "1" } },
+          { "value": "2", "title": { "de": "2" } },
+          { "value": "3+", "title": { "de": "3 oder mehr" } }
+        ],
+        "navigation": [
+          {
+            "conditionType": "static",
+            "condition": "0",
+            "next": "FAMILY_BONUS"
+          }
+        ]
+      }
+    ]
+  }
+  

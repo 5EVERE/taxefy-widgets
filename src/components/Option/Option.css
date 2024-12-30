@@ -1,0 +1,15 @@
+.option-button {
+  width: 100%;
+  text-align: center;
+  height: var(--button-height);
+  color: var(--primary-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #f8f8f8 !important;
+  flex: 1 1 calc(50% - 10px);
+  max-width: 100%;
+}
+.option-button:nth-child(1):only-child {
+  grid-column: span 2;
+}

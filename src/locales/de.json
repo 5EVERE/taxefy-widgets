@@ -1,0 +1,10 @@
+{
+  "widgets": {
+    "button": {
+      "download": "App herunterladen"
+    },
+    "notAvailable": {
+      "title": "Nicht verfügbar"
+    }
+  }
+}

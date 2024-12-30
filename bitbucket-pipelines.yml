@@ -1,0 +1,34 @@
+image: node:20
+
+pipelines:
+  branches:
+    master:  # This block specifies that the pipeline should run only on the master branch
+      - step:
+          name: Build
+          caches:
+            - node
+          script:
+            # Install dependencies and build the widget
+            - npm install
+            - npm run build
+
+          artifacts:  # Save the build artifacts for the next step
+            - dist/**
+
+      - step:
+          name: Deploy
+          trigger: manual  # This step will only run when triggered manually
+          script:
+            # Add the Droplet's SSH key to the known_hosts file to avoid "Host key verification failed"
+            - ssh-keyscan 164.92.204.29 >> ~/.ssh/known_hosts
+
+            # Ensure the widget is not a file and create the directory
+            - ssh root@164.92.204.29 "if [ -f /var/www/widget ]; then rm /var/www/widget; fi"
+            - ssh root@164.92.204.29 "mkdir -p /var/www/widget/"
+
+            # Use SCP to copy the widget files to the Droplet
+            - scp -r dist/* root@164.92.204.29:/var/www/widget/
+
+definitions:
+  caches:
+    node: ~/.npm  # Cache the node_modules folder to speed up future builds

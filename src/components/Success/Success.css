@@ -1,0 +1,45 @@
+.titleSucces {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.subTitleSucces {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.refund-amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.submit-btn {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  height: var(--button-height);
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+
+.info-text {
+  font-size: 14px;
+  opacity: 0.4;
+  margin: 0;
+  text-align: center;
+}
